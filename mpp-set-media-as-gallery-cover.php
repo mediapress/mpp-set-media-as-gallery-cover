@@ -5,7 +5,7 @@
  * Plugin URI: https://buddydev.com/plugins/mpp-set-media-as-gallery-cover/
  * Author: BuddyDev
  * Author URI: https://buddydev.com/
- * Version: 1.0.2
+ * Version: 1.0.0
  *
  * Text Domain: mpp-featured-content
  * Domain Path: /languages
