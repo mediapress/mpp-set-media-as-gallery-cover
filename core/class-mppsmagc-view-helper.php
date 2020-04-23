@@ -29,6 +29,8 @@ class MPPSMAGCover_Views_Helper {
 		// add buttons.
 		add_action( 'mpp_media_meta', array( $this, 'add_media_ui' ) );
 		add_action( 'mpp_lightbox_media_action_before_link', array( $this, 'add_lightbox_ui' ) );
+
+		add_filter( 'mpp_get_media_class', array( $this, 'modify_media_class' ) );
 	}
 
 	/**
@@ -64,6 +66,18 @@ class MPPSMAGCover_Views_Helper {
 		mppsmagc_set_cover_button( $media->id, false );
 	}
 
+	/**
+	 * Modify media class
+	 */
+	public function modify_media_class( $class ) {
+		$media = mpp_get_current_media();
+
+		if ( $media && mpp_get_gallery_cover_id( $media->gallery_id ) == $media->id ) {
+			$class .= ' gallery-cover';
+		}
+
+		return $class;
+	}
 }
 
 new MPPSMAGCover_Views_Helper();

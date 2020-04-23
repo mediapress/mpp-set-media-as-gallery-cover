@@ -110,7 +110,6 @@ class MPP_Set_Media_As_Gallery_Cover {
 			return;
 		}
 
-
 		wp_register_script( 'mpp-set-media-as-gallery-cover', $this->url . 'assets/js/mpp-set-media-as-gallery-cover.js', array( 'jquery' ) );
 
 		wp_localize_script( 'mpp-set-media-as-gallery-cover', 'MPPSMAGCover', array(

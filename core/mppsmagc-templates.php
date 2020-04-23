@@ -40,7 +40,7 @@ function mppsmagc_get_set_cover_button( $item_id, $wrapper = true ) {
 
 	$css_class = 'mppsmagc-cover-link';
 
-	$link = sprintf( '<a href="#" class="mppsmagc-cover-btn %s" data-item-id="%s" data-nonce="%s">%s</a>', $css_class, $item_id, wp_create_nonce( 'mppsmagc_set_cover' ), $label );
+	$link = sprintf( '<a href="#" class="button mppsmagc-cover-btn %s" data-item-id="%s" data-nonce="%s">%s</a>', $css_class, $item_id, wp_create_nonce( 'mppsmagc_set_cover' ), $label );
 
 	if ( $wrapper ) {
 		return sprintf( '<div class="generic-button %s">', $css_class . '-btn' ) . $link . '</div>';

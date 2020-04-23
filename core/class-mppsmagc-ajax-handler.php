@@ -54,6 +54,7 @@ class MPSMAGCover_Ajax_Handler {
 		}
 
 		mpp_update_gallery_cover_id( $media->gallery_id, $media_id );
+
 		wp_send_json_success( array(
 			'message' => __( 'Cover set.', 'mpp-set-media-as-gallery-cover' ),
 		) );

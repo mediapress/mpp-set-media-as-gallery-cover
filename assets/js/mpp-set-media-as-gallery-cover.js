@@ -13,6 +13,10 @@ jQuery(document).ready(function ($) {
             nonce: $this.data('nonce')
         }, function (resp) {
             $this.replaceWith(resp.data.message);
+
+            if ( resp.success ) {
+                window.location.reload();
+            }
         });
 
 		return false;
